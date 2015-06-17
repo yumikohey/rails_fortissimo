@@ -1209,3 +1209,23 @@ a.close-canvas-menu:hover {
 // Bootstrap issue in 3.3.0 with modal https://github.com/twbs/bootstrap/issues/9855
 // Fix
 body.modal-open { padding-right:inherit !important; }
+
+.ibox-title.light-blue-top {
+  border-color: rgba(108,195,249,0.8);
+}
+
+.ibox-title.primary-top {
+  border-color: rgba(11, 98, 164, 0.8);
+}
+
+.ibox-title.yellow-top {
+  border-color: rgba(251, 191, 20, 0.8);
+}
+
+.ibox-title.success-top {
+  border-color: #5cb85c;
+}
+
+.layout_2_block {
+  height: 35px;
+}

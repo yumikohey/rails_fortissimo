@@ -115,4 +115,7 @@ Myapp::Application.routes.draw do
 
   get "landing/index"
 
+
+
+  get "systems/:layout" => "systems#index"
 end
