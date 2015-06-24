@@ -3,6 +3,9 @@ Myapp::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root to: 'systems#index'
 
+  get '/login', to: "pages#login"
+  get '/register', to: "pages#register"
+
   # All routes
   get "dashboards/dashboard_1"
   get "dashboards/dashboard_2"

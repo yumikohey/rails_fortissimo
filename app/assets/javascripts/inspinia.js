@@ -102,8 +102,7 @@ $(document).ready(function () {
             windowScrollTop = $(window).scrollTop();
 
         if( (windowHeight < pageWrapperHeight + windowScrollTop)){
-            $('#page-wrapper').css("height", pageWrapperHeight + 200 + "px");
-            $('#page-wrapper').css("max-height",  + 1800 + "px");
+            $('#page-wrapper').css("height", 'auto');
         }
 
         // var heightWithoutNavbar = $("body > #wrapper").height() - 61;
