@@ -6,6 +6,9 @@ Myapp::Application.routes.draw do
   get '/login', to: "pages#login"
   get '/register', to: "pages#register"
 
+  get '/systems/tuning', to: "systems#tuning"
+  get '/systems/admin', to: "systems#admin"
+
   # All routes
   get "dashboards/dashboard_1"
   get "dashboards/dashboard_2"

@@ -7,4 +7,12 @@ class SystemsController < ApplicationController
 			render :layout => 'layout_4'
 		end
 	end
+
+	def tuning
+		render 'tuning', :layout => 'layout_4'
+	end
+
+	def admin
+		render 'admin', :layout => 'layout_4'
+	end
 end

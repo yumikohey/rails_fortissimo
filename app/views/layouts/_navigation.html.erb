@@ -22,17 +22,17 @@
                 <a href="/systems/1"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span> </a>
             </li>
             <li class="<%= is_active_controller('layoutsoptions') %>">
-                <%= link_to pages_empty_page_path do %>
-                <i class="fa fa-diamond"></i> <span class="nav-label">Layouts</span> <span class="label label-primary pull-right">NEW</span>
+                <%= link_to systems_tuning_path do %>
+                <i class="fa fa-diamond"></i> <span class="nav-label">Tuning</span> <span class="label label-primary pull-right">NEW</span>
                 <% end %>
             </li>
             <li class="<%= is_active_controller('graphs') %>">
                 <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Admin</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level is_active_controller('graphs')">
-                    <li class="<%= is_active_action('flot') %>"><%= link_to "Cluster Management", pages_empty_page_path %></li>
-                    <li class="<%= is_active_action('morris') %>"><%= link_to "Foundation Management", pages_empty_page_path %></li>
-                    <li class="<%= is_active_action('rickshaw') %>"><%= link_to "Sotrage Export Management", pages_empty_page_path %> </li>
-                    <li class="<%= is_active_action('chartjs') %>"><%= link_to "User Management", pages_empty_page_path %></li>
+                    <li class="<%= is_active_action('flot') %>"><%= link_to "Cluster Management", systems_admin_path %></li>
+                    <li class="<%= is_active_action('morris') %>"><%= link_to "Foundation Management", systems_admin_path %></li>
+                    <li class="<%= is_active_action('rickshaw') %>"><%= link_to "Sotrage Export Management", systems_admin_path %> </li>
+                    <li class="<%= is_active_action('chartjs') %>"><%= link_to "User Management", systems_admin_path %></li>
                 </ul>
             </li>
             <li class="<%= is_active_controller('dashboards') %>">

@@ -1,0 +1,193 @@
+<div class="layout_2_block">
+	
+</div>
+
+	<div class="col-lg-3">
+		<div class="ibox float-e-margins">
+		    <div class="ibox-title light-blue-top">
+		        <h5>Memory Tuning
+		        </h5>
+		    </div>
+		   
+		    <div class="ibox-content">
+		    	<div class="text-center">
+		    	    <div class="m-r-md inline">
+		    	        <input type="text" value="75" class="dial m-r-sm" data-fgColor="#1AB394" data-width="150" data-height="150" />
+		    	    </div>
+		    	</div>
+				</div>
+		</div>
+				<div class="ibox float-e-margins">
+			    	<div class="ibox-title">
+			    	    <h5>Minimum OS Memory
+			    	    </h5>
+			    	</div>
+			    	<div class="ibox-content">
+	  	      	<div class="col-lg-12" id="basic_slider" style="margin-top:15px;"></div>
+
+			    	<div class="row">
+			    		<button data-toggle="button" class="btn btn-info btn-sm btn-outline pull-right" type="button" style="margin-top:30px;">Confirm</button>
+			    	</div>
+			    </div>
+				</div>
+  </div>
+
+	<div class="col-lg-3">
+		<div class="ibox float-e-margins">
+		    <div class="ibox-title primary-top">
+            <h5> Memory Details </h5>
+            <div class="ibox-tools">
+                <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-wrench"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li>
+                        <a href="#">Config option 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Config option 2</a>
+                    </li>
+                </ul>
+                <a class="close-link">
+                    <i class="fa fa-times"></i>
+                </a>
+            </div>
+        </div>
+        <div class="ibox-content">
+
+            <table class="table table-striped">
+                <tbody>
+                <tr>
+                    <td>Volume Name</td>
+                    <td class="text-navy"> test </td>
+                </tr>
+                <tr>
+                    <td>Volume Size</td>
+                    <td class="text-warning"> 495GB </td>
+                </tr>
+                <tr>
+                    <td>Volume Type</td>
+                    <td class="text-navy"> JBOD </td>
+                </tr>
+                <tr>
+                    <td>Scheduler</td>
+                    <td class="text-navy"> File Placement Optimizer </td>
+                </tr>
+                <tr>
+                    <td>Compression Data</td>
+                    <td class="text-navy"> OFF </td>
+                </tr>
+                <tr>
+                    <td>Data Deduplication</td>
+                    <td class="text-navy"> OFF </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+		</div>
+	</div>
+	<div class="col-lg-3">
+
+				<div class="ibox float-e-margins">
+				    <div class="ibox-title yellow-top">
+				        <h5>Volumes Tuning
+				        </h5>
+				    </div>
+				    <div class="ibox-content">
+				    	<div class="text-center">
+				    			<div class="m-r-md inline">
+				    			    <input type="text" value="60" class="dial m-r" data-fgColor="#1AB394" data-width="150" data-height="150" data-angleOffset=-125 data-angleArc=250 />
+				    			</div>
+				    	</div>
+				    </div>
+				</div>
+	
+	</div>
+		<div class="col-lg-3">
+			<div class="ibox float-e-margins">
+			    <div class="ibox-title success-top">
+	            <h5> Memory Details </h5>
+	            <div class="ibox-tools">
+	                <a class="collapse-link">
+	                    <i class="fa fa-chevron-up"></i>
+	                </a>
+	                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+	                    <i class="fa fa-wrench"></i>
+	                </a>
+	                <ul class="dropdown-menu dropdown-user">
+	                    <li>
+	                        <a href="#">Config option 1</a>
+	                    </li>
+	                    <li>
+	                        <a href="#">Config option 2</a>
+	                    </li>
+	                </ul>
+	                <a class="close-link">
+	                    <i class="fa fa-times"></i>
+	                </a>
+	            </div>
+	        </div>
+	        <div class="ibox-content">
+
+	            <table class="table table-striped">
+	                <tbody>
+	                <tr>
+	                    <td>Volume Name</td>
+	                    <td class="text-navy"> test </td>
+	                </tr>
+	                <tr>
+	                    <td>Volume Size</td>
+	                    <td class="text-warning"> 495GB </td>
+	                </tr>
+	                <tr>
+	                    <td>Volume Type</td>
+	                    <td class="text-navy"> JBOD </td>
+	                </tr>
+	                <tr>
+	                    <td>Scheduler</td>
+	                    <td class="text-navy"> File Placement Optimizer </td>
+	                </tr>
+	                <tr>
+	                    <td>Compression Data</td>
+	                    <td class="text-navy"> OFF </td>
+	                </tr>
+	                <tr>
+	                    <td>Data Deduplication</td>
+	                    <td class="text-navy"> OFF </td>
+	                </tr>
+	                </tbody>
+	            </table>
+	        </div>
+			</div>
+		</div>
+
+
+<%= javascript_include_tag 'graphs' %>
+
+<% content_for :javascript do %>
+
+<script type="text/javascript">
+
+
+$(function() {
+
+	$(".dial").knob();
+
+	$("#basic_slider").noUiSlider({
+	    start: 40,
+	    behaviour: 'tap',
+	    connect: 'upper',
+	    range: {
+	        'min': 20,
+	        'max': 100
+	    }
+	});
+
+});
+
+</script>
+
+<% end %>		
